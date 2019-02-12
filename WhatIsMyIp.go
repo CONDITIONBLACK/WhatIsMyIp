@@ -20,9 +20,9 @@ type Response struct {
 }
 
 func writeIp(w http.ResponseWriter, res *Response) {
-	json, _ := json.Marshal(res)
-	log.Println("Received request: " + string(json))
-	fmt.Fprintf(w, string(json))
+	//json, _ := json.Marshal(res)
+	log.Println("Received request: " + string(res))
+	fmt.Fprintf(w, string(res))
 }
 
 func writeError(w http.ResponseWriter, err error) {
